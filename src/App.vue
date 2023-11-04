@@ -33,7 +33,7 @@ export default {
   <h1>Progetti API</h1>
   <hr />
 
-  <ProjectsList />
+  <ProjectsList :projects="projects" />
 </template>
 
 <style lang="scss"></style>
