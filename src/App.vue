@@ -1,5 +1,6 @@
 <script>
 import ProjectsList from "./components/projects/ProjectsList.vue";
+import axios from "axios";
 
 export default {
   data() {
@@ -7,6 +8,8 @@ export default {
   },
 
   components: { ProjectsList },
+
+  created() {},
 };
 </script>
 
