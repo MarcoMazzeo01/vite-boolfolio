@@ -4,15 +4,27 @@ import axios from "axios";
 
 export default {
   data() {
-    return {};
+    return {
+      projects: [],
+      api: {
+        baseURL: "http://127.0.0.1:8000/api/",
+      },
+    };
   },
 
   components: { ProjectsList },
 
+  methods: {
+    fetchProjects(uri = this.api.baseURL + "projects") {
+      axios.get(uri).then((response) => {
+        console.log(response.data);
+        this.projects = response.data;
+      });
+    },
+  },
+
   created() {
-    axios.get("http://127.0.0.1:8000/api/projects").then((response) => {
-      console.log(response.data);
-    });
+    this.fetchProjects();
   },
 };
 </script>
