@@ -1,15 +1,20 @@
 <script>
+import ProjectsList from "./components/projects/ProjectsList.vue";
+
 export default {
   data() {
     return {};
   },
 
-  methods() {},
+  components: { ProjectsList },
 };
 </script>
 
 <template>
-  <h1>TEST</h1>
+  <h1>Progetti API</h1>
+  <hr />
+
+  <ProjectsList />
 </template>
 
 <style lang="scss"></style>
